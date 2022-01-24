@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+  .jumbotron{
+    margin-bottom: 0px;
+  }
+  .a1 {
+  text-decoration: none;
+  display: absolute;
+  display: block;
+  width: 1000;
+  height: 100;
+  background: black;
+  text-align: center;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  transition: 0.5s;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 300%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(60) 1s 1 normal both,
+             blinkTextCursor 500ms steps(60) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 22em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(82, 121, 228, 0.75);}
+  to{border-right-color: transparent;}
+
+}
+
+h3{
+  font-style: oblique;
+  color: rgba(14, 45, 131, 0.75);
+}
+</style>
+<body>
+  {% include "exam/navbar.html" %}
+<!-- <br>
+<br>
+<br>
+<br> -->
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <br>
+    <br>
+    <h2 class=" a1 display-3 text-success">Descriptive Answer Checker</h2>
+    <br>
+    <br>
+    <br>
+    <p class=" line-1 anim-typewriter " >Automated tool for subjective score calculation!</p>
+    <!-- <p class="lead">Sign Up now to start your first online examination</p> -->
+
+    <h3 ><strong> Continue with:</strong></h3>
+    <br>
+    
+    <a href="/student/studentsignup" class="btn btn-lg btn-success rounded-pill" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign Up as Student</a>
+    <a href="/student/studentlogin" class="btn btn-lg btn-success rounded-pill" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Student Login</a>
+    <br>
+  
+    <br>
+    <a href="/teacher/teachersignup" class="btn btn-lg btn-dark rounded-pill" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Sign Up as Teacher</a>
+    <a href="/teacher/teacherlogin" class="btn btn-lg btn-dark rounded-pill" style="padding-right: 35px; border-radius: 0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Teacher Login</a>
+    
+    <br><br><br><br>
+  </div>  
+</section>
+  {% include "exam/footer.html" %}
+
+
+</body>
+
+</html>
